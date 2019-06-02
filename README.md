@@ -55,7 +55,7 @@
 
     （2）获取指定位置的数组元素：(a)通过方括号加下角标来获取；（b）通过get和set方法
 
-11. 字符串与基本类型的转换：![Kotlin字符串与基本数据的转换](http://sdssdccddd.gitee.io/myblogimg/Kotlin基本数据类型.pngKotlin字符串与基本数据的转换.png)
+11. 字符串与基本类型的转换：![Kotlin字符串与基本数据的转换](http://sdssdccddd.gitee.io/myblogimg/Kotlin字符串与基本数据的转换.png)
 
 12. 字符串的常用方法（Kotlin基本兼容Java的相关方法）
 
