@@ -61,3 +61,14 @@
 
     查找子串：index()；截取指定位置子串：substring()；替换子串：replace()；分隔子串：split()
 
+    1. 在Java中，split()方法返回的是String[]；但是在Kotlin中，split()返回的是```List<String>```
+
+    2. Kotlin允许直接通过下标访问字符串指定位置的字符，也可以通过get方法获取指定位置上的字符
+
+       ```java
+       tv_convert.text = origin[number].toString()
+       tv_convert.text = origin.get(number).toString()
+       ```
+
+    3. Kotlin格式化字符串：符号$后面跟变量名，系统会自动匹配最长的变量名；如果在取值前需要先运算，则需用大括号把运算表达式给括起来；$属于特殊字符，打印需转义：```${'***'}```
+
