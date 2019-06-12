@@ -35,5 +35,46 @@ class StringActivity : AppCompatActivity(){
         }
         //只能转换字符串“true”和“false”
 //        origin_trim.toBoolean();
+        //String-->CharArray
+        var char_array:CharArray
+        btn_chararray.setOnClickListener {
+            char_array = origin.toCharArray()
+            var str:String = ""
+            for (item in char_array){
+                str = str + item.toString() + ", "
+            }
+            tv_convert.text = str
+        }
+        //replace()
+        btn_replace.setOnClickListener{
+            tv_convert.text = origin.replace(".", "+")
+        }
+        //split()
+        btn_split.setOnClickListener {
+            var strList:List<String> = origin.split(".")
+            var strResult:String = ""
+            for (item in strList){
+                strResult = strResult + item + ", "
+            }
+            tv_convert.text = strResult
+        }
+        var number:Int
+        btn_cut.setOnClickListener {
+            number = et_number.text.toString().toInt()
+            tv_convert.text = origin[number].toString()
+//            tv_convert.text = origin.get(number).toString()
+        }
+//        btn_format.setOnClickListener {
+//            tv_convert.text = "字符串值为 $origin"
+//        }
+        btn_format.setOnClickListener {
+            tv_convert.text = "字符串值为 $origin_trim"
+        }
+        btn_length.setOnClickListener {
+            tv_convert.text = "字符串长度为 ${origin.length}"
+        }
+        btn_dollar.setOnClickListener {
+            tv_convert.text = "美元金额为 ${'$'}$origin"
+        }
     }
 }
