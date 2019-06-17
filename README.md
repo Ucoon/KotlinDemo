@@ -96,7 +96,7 @@
        ```
  4. 各种容器与其初始化方法的对应关系：
 
-       ![Kotlin的容器及其初始化方法](C:\MyBlog\static\images\Kotlin的容器及其初始化方法.png)
+       ![Kotlin的容器及其初始化方法](http://sdssdccddd.gitee.io/myblogimg/Kotlin的容器及其初始化方法.png)
 
 13.1 集合Set/MutableSet
 
