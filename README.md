@@ -61,3 +61,37 @@
 
     查找子串：index()；截取指定位置子串：substring()；替换子串：replace()；分隔子串：split()
 
+    1. 在Java中，split()方法返回的是String[]；但是在Kotlin中，split()返回的是```List<String>```
+
+    2. Kotlin允许直接通过下标访问字符串指定位置的字符，也可以通过get方法获取指定位置上的字符
+
+       ```java
+       tv_convert.text = origin[number].toString()
+       tv_convert.text = origin.get(number).toString()
+       ```
+
+    3. Kotlin格式化字符串：符号$后面跟变量名，系统会自动匹配最长的变量名；如果在取值前需要先运算，则需用大括号把运算表达式给括起来；$属于特殊字符，打印需转义：```${'***'}```
+    
+13. Kotlin中的容器
+
+    Kotlin有三类基本容器：**集合Set，队列List，映射Map**，每类容器又分作只读与可变两种类型，这是为了判断该容器能否进行增、删、改等操作（**Kotlin对变量的修改操作很慎重，每个变量在定义的时候就必须指定能否修改**）
+
+    1. 容器默认为只读容器，如果需要允许修改该容器变量，则需加上Mutable前缀形成新的容器：MutableSet表示可变集合，MutableList表示可变队列，MutableMap表示可变映射。
+
+    2. Kotlin允许在声明容器变量的时候就进行初始赋值，如同对数组变量进行初始化那样。
+
+       ```kotlin
+       val satellites:List<String> = listOf("水星", "金星", "地球","火星","木星","土星")
+       ```
+
+    3. 容器公共方法如下：
+
+       ```kotlin
+       isEmpty：判断该容器是否为空
+       isNotEmpty：判断该容器是否非空
+       clear：清空该容器
+       contains：判断该容器是否包含指定元素
+       iterator：获取该容器的迭代器
+       count：获取该容器包含的元素个数，也可通过size属性
+       ```
+
