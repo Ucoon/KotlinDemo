@@ -16,6 +16,9 @@
         <activity android:name=".VariableActivity"/>
         <activity android:name=".ArrayActivity"/>
         <activity android:name=".SetOfActivity">
+
+        </activity>
+        <activity android:name=".ListOfActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
