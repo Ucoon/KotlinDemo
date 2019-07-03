@@ -19,6 +19,8 @@
 
         </activity>
         <activity android:name=".ListOfActivity">
+        </activity>
+        <activity android:name=".MapOfActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
