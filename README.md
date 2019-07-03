@@ -121,3 +121,24 @@
    3. MutableList的set方法允许替换或修改指定位置的元素
    4. MutableList的removeAt方法允许删除指定位置的元素
 3. 队列的遍历：for-in循环、迭代器遍历、forEach遍历，**按元素下标循环遍历**
+
+13.3 映射Map/MutableMap
+
+1. 映射内部保存的是一组键值对（Key-Value），元素的键与值是一一对应的关系
+
+   1. ```containsKey```：判断是否存在指定key的元素，```containsValue```：判断是否存在指定value的元素
+
+   2. MutableMap的put函数会先根据key寻找同名元素，如果找不到就添加新元素，如果找得到就用新元素代替旧元素
+
+   3. MutableMap的remove是通过key来删除元素
+
+   4. 如何表示单个键值对元素：（1）“key to value”；（2）采取Pair配对方式，形如“Pair(key, value)”
+
+      ```kotlin
+      //to方式初始化映射
+      var goodsMap: Map<String, String> = mapOf("苹果" to "iPhone8", "华为" to "Mate10", "小米" to "小米6", "欧珀" to "OPPO R11", "步步高" to "vivo X9S", "魅族" to "魅族Pro6S")
+      //Pair方式初始化映射
+      var goodsMutMap: MutableMap<String, String> = mutableMapOf(Pair("苹果", "iPhone8"), Pair("华为", "Mate10"), Pair("小米", "小米6"), Pair("欧珀", "OPPO R11"), Pair("步步高", "vivo X9S"), Pair("魅族", "魅族Pro6S"))
+      ```
+
+2. 映射的遍历：for-in循环、迭代器遍历、forEach遍历
