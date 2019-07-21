@@ -21,6 +21,8 @@
         <activity android:name=".ListOfActivity">
         </activity>
         <activity android:name=".MapOfActivity">
+        </activity>
+        <activity android:name=".ConditionActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
