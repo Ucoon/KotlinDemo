@@ -143,3 +143,39 @@
       ```
 
 2. 映射的遍历：for-in循环、迭代器遍历、forEach遍历
+
+
+14. 条件分支
+
+    1. Kotlin允许分支语句有返回值
+
+    2. Kotlin不提供三元运算发，使用if/else语句可实现同样的功能
+
+    3. 由于原来的switch/case机制存在局限，故而Kotlin推出新的关键字，即用when/else来处理多路分支的条件分支，与switch/case有以下几点区别
+
+       1. 关键字switch被when取代
+
+       2. 判断语句“case 常量值:” 被新语句“常量值 ->”取代
+
+       3. 每个分支后面的break语句被取消了
+
+       4. 关键字default被else取代
+
+       5. Kotlin进行when/else分支处理时允许引入变量判断，也可以引入具体的运算表达式
+
+       6. 原来的switch/case机制中，每个case仅仅对应一个常量值，现在when/else机制可实现常量值并排在一起用逗号隔开，如果几个常量值刚好是连续数字，可以使用“in 开始值..结束值”指定区间范围，如下所示：
+
+          ```kotlin
+          btn_when_region.setOnClickListener {
+                      //when的条件可以是个范围
+                      tv_answer.text = when (count) {
+                          1,3,5,7,9 -> "凉风有信的谜底是“讽”"
+                          in 13..19 -> "秋月无边的谜底是“二”"
+                          !in 6..10 -> "当里的当，少侠你来猜猜"
+                          else -> "好诗，这真是一首好诗"
+                      }
+                      count = (count + 1) % 3
+                  }
+          ```
+
+       7. when/else支持类型判断，采取“is 变量类型 ->”这种形式，取消了原来的instanceof关键字
